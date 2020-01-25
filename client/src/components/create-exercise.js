@@ -24,6 +24,7 @@ export default class CreateExercise extends Component {
     }
 
     componentDidMount() {
+        console.log('ENV', `${process.env.REACT_APP_BASE_URL}`);
         axios.get(process.env.REACT_APP_BASE_URL + '/users/')
             .then(res => {
                 if (res.data.length > 0) {
